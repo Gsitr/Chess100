@@ -28,8 +28,10 @@ export const piecesRender = {
         })
     },
     placeWhiteDownOrUp() {
-        const flexWrap = chessConfig.whitePlaysDown ? 'wrap' : 'wrap-reverse'
-        $( chessConfig.chessTableSelector ).style.flexWrap = flexWrap
+      const flexWrap = chessConfig.whitePlaysUp ? 'wrap-reverse' : 'wrap'
+      $( chessConfig.chessTableSelector ).style.flexWrap = flexWrap
+      const flexDirection = chessConfig.whitePlaysUp ? 'row-reverse' : 'row'
+      $( chessConfig.chessTableSelector ).style.flexDirection = flexDirection
     },
     placePiecesInPosition( gameSetup ) {
         for ( const piecePosition in gameSetup ) {
