@@ -15,14 +15,18 @@ export default {
         const col = +alphPosIn[ pieceBoxPosition[ 0 ] ]
         const row = +pieceBoxPosition[ 1 ]
     
-        if ( row === ( isWhitePiece ? 8 : 1 ) ) return
+        /*if ( row === ( isWhitePiece ? 8 : 1 ) ) return*/
+        if ( row === ( isWhitePiece ? 10 : 1 ) ) return
 
         const determination0 = `${alphPosOut[ col ]}${ row + ( isWhitePiece ? 1 : -1 ) }`
         this.determinations[ pieceBoxPosition ][ determination0 ] = true
 
-        if ( row === ( isWhitePiece ? 2 : 7 ) ) {
-            const determination1 = `${alphPosOut[ col ]}${ isWhitePiece ? 4 : 5 }`
-            this.determinations[ pieceBoxPosition ][ determination1 ] = true
+        /*if ( row === ( isWhitePiece ? 2 : 7 ) ) {*/
+        if ( row === ( isWhitePiece ? 2 : 9 ) ) {
+          const determination1 = `${alphPosOut[ col ]}${ isWhitePiece ? 4 : 5 }`
+          this.determinations[ pieceBoxPosition ][ determination1 ] = true
+          /*const determination1 = `${alphPosOut[ col ]}${ isWhitePiece ? 5 : 6 }`
+          this.determinations[ pieceBoxPosition ][ determination1 ] = true*/
         }
 
         const potentialpos2 = col - 1

@@ -1,3 +1,5 @@
+/*import toad from "./piecesDetermine/toad.js"
+import fool from "./piecesDetermine/fool.js"*/
 import pawn from "./piecesDetermine/pawn.js"
 import knight from "./piecesDetermine/knight.js"
 import rook from "./piecesDetermine/rook.js"
@@ -101,6 +103,8 @@ export const piecesDetermine = {
     ...knight,
     ...rook,
     ...bishop,
+    /*...toad,
+    ...fool,*/
     ...queen,
     ...king,
 }
